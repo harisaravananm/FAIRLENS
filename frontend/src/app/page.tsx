@@ -14,6 +14,8 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [debiasing, setDebiasing] = useState(false);
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
   const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const selectedFile = e.target.files[0];
@@ -23,7 +25,7 @@ export default function Home() {
       formData.append('file', selectedFile);
       
       try {
-        const res = await axios.post('http://localhost:8000/api/upload', formData);
+        const res = await axios.post(`${API_URL}/api/upload`, formData);
         setColumns(res.data.columns);
       } catch (err) {
         console.error('Error uploading file', err);
@@ -40,7 +42,7 @@ export default function Home() {
     formData.append('sensitive_attribute', sensitiveAttr);
     
     try {
-      const res = await axios.post('http://localhost:8000/api/analyze', formData);
+      const res = await axios.post(`${API_URL}/api/analyze`, formData);
       setAnalysis(res.data);
     } catch (err) {
       console.error('Error analyzing', err);
@@ -55,7 +57,7 @@ export default function Home() {
     formData.append('method', method);
     
     try {
-      const res = await axios.post('http://localhost:8000/api/debias', formData);
+      const res = await axios.post(`${API_URL}/api/debias`, formData);
       setAnalysis({
         ...analysis,
         metrics: res.data.new_metrics
