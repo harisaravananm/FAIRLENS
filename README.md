@@ -1,6 +1,8 @@
-﻿# FairLens
+# FairLens
 
-[![Last commit](https://img.shields.io/github/last-commit/harisaravananm/FAIRLENS?style=for-the-badge)](https://github.com/harisaravananm/FAIRLENS/commits/main)
+<!-- tech-version-badges -->
+![Next.js 16.2.4](https://img.shields.io/badge/Next.js-16.2.4-000000?style=for-the-badge&logo=nextdotjs&logoColor=white) ![React 19.2.4](https://img.shields.io/badge/React-19.2.4-61DAFB?style=for-the-badge&logo=react&logoColor=white) ![FastAPI Python](https://img.shields.io/badge/FastAPI-Python-009688?style=for-the-badge&logo=fastapi&logoColor=white) ![TypeScript 5.x](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+<!-- /tech-version-badges -->
 
 A web application for exploring and reducing bias in machine-learning workflows through data analysis and AI-assisted insights.
 
