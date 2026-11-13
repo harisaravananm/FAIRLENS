@@ -37,8 +37,8 @@ The script starts the backend on port `8000` and the frontend development server
 ```text
 .
 |-- backend/
-â”‚   |-- main.py
-â”‚   `-- requirements.txt
+|   |-- main.py
+|   `-- requirements.txt
 |-- frontend/
 |-- sample.csv
 `-- run.bat
