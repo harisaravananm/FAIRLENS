@@ -1,65 +1,47 @@
-# FairLens
+﻿# FairLens
 
-FairLens is a web application for exploring and reducing bias in machine-learning workflows. It provides a frontend interface backed by a FastAPI service, with a sample CSV included for local experimentation.
+[![Last commit](https://img.shields.io/github/last-commit/harisaravananm/FAIRLENS?style=for-the-badge)](https://github.com/harisaravananm/FAIRLENS/commits/main)
+
+A web application for exploring and reducing bias in machine-learning workflows through data analysis and AI-assisted insights.
+
+## Table of Contents
+
+- [Features](#features)
+- [Tech stack](#tech-stack)
+- [Quick start](#quick-start)
+- [Project structure](#project-structure)
+- [License](#license)
+
+## Features
+
+- Clear project organization for learning, experimentation, or demonstration
+- Project-specific workflows documented below
+- Reproducible local setup instructions
 
 ## Tech stack
 
-- **Frontend:** Next.js, TypeScript, and npm
-- **Backend:** FastAPI and Uvicorn
-- **Data:** CSV upload and analysis workflows
+Next.js, TypeScript, FastAPI, Uvicorn, CSV analysis, and machine learning fairness workflows
 
-## Prerequisites
-
-- Node.js and npm
-- Python 3.10 or later
-- A Python virtual environment in `backend/venv`
-
-## Run locally
-
-### Windows
-
-From the repository root, run:
+## Quick start
 
 ```bat
 run.bat
 ```
 
-This starts the backend on `http://localhost:8000` and the frontend with the Next.js development server.
-
-### Manual setup
-
-Start the backend:
-
-```bat
-cd backend
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
-```
-
-In a second terminal, start the frontend:
-
-```bat
-cd frontend
-npm install
-npm run dev
-```
-
-Open the frontend URL shown by Next.js in your browser.
+The script starts the backend on port `8000` and the frontend development server. For manual setup, create `backend\venv`, install `backend\requirements.txt`, then run `npm install` and `npm run dev` inside `frontend`.
 
 ## Project structure
 
 ```text
 .
-├── backend/
-│   ├── main.py
-│   └── requirements.txt
-├── frontend/
-├── sample.csv
-└── run.bat
+|-- backend/
+â”‚   |-- main.py
+â”‚   `-- requirements.txt
+|-- frontend/
+|-- sample.csv
+`-- run.bat
 ```
 
 ## License
 
-This project is distributed under the license in [LICENSE](LICENSE).
+No root LICENSE file is currently included.
